@@ -65,3 +65,20 @@ function validateEmailwithpattern4(email) {
 
 let emailId4 = 'abc.xyz@bridgelabz.co';
 validateEmailwithpattern4(emailId4);
+
+console.log("UC-5");
+//UC-5 To Validate second optional part of Email
+function validateEmailwithpattern5(email) {
+   var pattern = RegExp('^[A-Z a-z 0-9]+([._+-][0-9 a-z A-Z]+)*@[0-9 a-z A-Z]+.[a-z A-Z]{2,3}([.][a-z A-Z]{2})*$');
+   if(pattern.test(email)){
+      console.log("Valid EmailId!");
+      return true;
+   }
+   else {
+      console.log("Invalid EmailId!");
+      return false;
+   }
+}
+
+let emailId5 = 'abc.xyz@bridgelabz.co.in';
+validateEmailwithpattern5(emailId5);

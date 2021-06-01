@@ -49,3 +49,20 @@ function validatePincodewithpattern3(pincode) {
 
 let pincode3 = '400088B';
 validatePincodewithpattern3(pincode3);
+
+console.log("UC-4");
+//UC-4 To allow space in the middle of PinCode
+function validatePincodewithpattern4(pincode) {
+   var pattern = RegExp('^[1-9]{1}[0-9]{2}\\s{0,1}[0-9]{3}$');
+   if(pattern.test(pincode)){
+      console.log("Valid PinCode!");
+      return true;
+   }
+   else {
+      console.log("Invalid PinCode!");
+      return false;
+   }
+} 
+
+let pincode4 = '400 088';
+validatePincodewithpattern4(pincode4);
